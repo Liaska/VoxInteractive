@@ -53,6 +53,95 @@ $ColorR: #CB0037;
     font-family: $MSC;
 }
 
-h1 {
-    color: black;
+.header {
+    @include BackGY;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+}
+
+.header__opener, .header__closer {
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+}
+
+.closed {
+    opacity: 0;
+}
+
+.travel {
+    padding-top: 115px;
+}
+
+.menu {
+    --color: #fff;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: absolute;
+    border: none;
+    background: none;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    -webkit-appearence: none;
+    -webkit-tap-highlight-color: transparent;
+        svg {
+            width: 64px;
+            height: 48px;
+            top: -6px;
+            left: -14px;
+            stroke: var(--color);
+            stroke-width: 4px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            display: block;
+            position: absolute;
+            path {
+                transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+                stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+                stroke-dashoffset: var(--offset, 126px);
+                transform: translateZ(0);
+                &:nth-child(2) {
+                    --duration: .7s;
+                    --easing: ease-in;
+                    --offset: 100px;
+                    --array-2: 74px;
+                }
+                &:nth-child(3) {
+                    --offset: 133px;
+                    --array-2: 107px;
+                }
+            }
+        }
+
+        &.active {
+            svg {
+                path {
+                    --offset: 57px;
+                    &:nth-child(1),
+                    &:nth-child(3) {
+                        --delay: .15s;
+                        --easing: cubic-bezier(.2, .4, .2, 1.1);
+                    }
+                    &:nth-child(2) {
+                        --duration: .4s;
+                        --offset: 2px;
+                        --array-1: 1px;
+                    }
+                    &:nth-child(3) {
+                        --offset: 58px;
+                    }
+                }
+            }
+        }
 }
