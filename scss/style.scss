@@ -251,3 +251,60 @@ $ColorR: #CB0037;
 .uppercase {
     text-transform: uppercase;
 }
+
+input[type=text], input[type=tel] {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 3px;
+    padding: 20px;
+    width: 380px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.formBorder {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 7px;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid black;
+        }
+    margin-bottom: 30px;
+}
+
+.request__inputs {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.request__label {
+    margin-bottom: 10px;
+}
+
+.inputWrapper:first-child {
+    margin-right: 20px;
+}
+
+.formRequired::after {
+    content: "*";
+    padding-left: 4px;
+    color: $ColorR
+}
+
+span {
+    color: $ColorR;
+}
+
+input:focus {
+    outline: none;
+}

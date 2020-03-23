@@ -94,12 +94,12 @@
 						<p class="request__info formTitles formBorder uppercase">Немного о Вас</p>
 						<div class="request__inputs">
 							<div class="name inputWrapper">
-								<label class="formText formRequired uppercase" for="name">Имя</label>
+								<label class="formText formRequired uppercase request__label" for="name">Имя</label>
 								<input type="text" name="name" required="required" id="name"/>
 							</div>
 							<div class="phone inputWrapper">
-								<label class="formText uppercase" for="phone">Телефон</label>
-								<input type="number" name="phono" placeholder="+7___ ___ __ __" id="phone"/>
+								<label class="formText uppercase request__label" for="phone">Телефон</label>
+								<input type="text" name="phono" placeholder="+7___ ___ __ __" id="phone" pattern="+7[0-9]{3}-[0-9]{7}" maxlength="12" minlength="12"/>
 							</div>
 						</div>
 					</div>
@@ -107,11 +107,11 @@
 						<p class="request__info formTitles formBorder uppercase">О ПУТЕШЕСТВИИ</p>
 						<div class="request__inputs">
 							<div class="where inputWrapper">
-								<label class="formText formRequired uppercase" for="where" placeholder="Континент, страна или город">КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?</label>
+								<label class="formText formRequired uppercase request__label" for="where" placeholder="Континент, страна или город">КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?</label>
 								<input type="text" name="name" required="required" id="where"/>
 							</div>
 							<div class="when inputWrapper">
-								<label class="formText uppercase" for="when">КОГДА?</label>
+								<label class="formText uppercase request__label" for="when">КОГДА?</label>
 								<input type="text" name="name" required="required" id="when"/>
 							</div>
 						</div>
@@ -173,7 +173,8 @@
 							<p><span>*</span> Поля, которые надо обязательно заполнить</p>
 						</div>
 					</div>
-				</form><button type="submit">ОТПРАВИТЬ</button>
+					<button type="submit">ОТПРАВИТЬ</button>
+				</form>
 			</div>
 		</section>
 		<script src="build/js/script.js"></script>
