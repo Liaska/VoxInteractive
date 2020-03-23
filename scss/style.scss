@@ -38,8 +38,9 @@ $MSC: 'MuseoSansCyrl';
 $ColorY: #FFD241;
 $ColorR: #CB0037;
 
-@mixin BackGY {
+@mixin BackGY($weight:900) {
     background: $ColorY;
+    font-weight: $weight
 }
 
 @mixin BackGR {
@@ -51,6 +52,12 @@ $ColorR: #CB0037;
     margin: 0;
     box-sizing: border-box;
     font-family: $MSC;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 .header {
@@ -58,24 +65,7 @@ $ColorR: #CB0037;
     position: fixed;
     width: 100%;
     height: 70px;
-}
-
-.header__opener, .header__closer {
-    font-size: 30px;
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-}
-
-.closed {
-    opacity: 0;
-}
-
-.travel {
-    padding-top: 115px;
+    z-index: 10;
 }
 
 .menu {
@@ -144,4 +134,120 @@ $ColorR: #CB0037;
                 }
             }
         }
+}
+
+.travel {
+    padding-top: 115px;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 900;
+}
+
+.travel__countries {
+    padding-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.travel__tour {
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.travel__tour:nth-child(even) {
+    margin-left: 20px;
+}
+
+.travel__description {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.travel__description-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.travel__description-photo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.travel__description-price {
+    position: absolute;
+    @include BackGY;
+    bottom: 0;
+    left: 0;
+    padding: 14px 26px;
+    font-size: 18px;
+}
+
+.country {
+    text-transform: uppercase;
+    font-size: 9px;
+    color: #C5B223;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.route {
+    font-size: 10px;
+    line-height: 13px;
+    color: #8C8C8C;
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 10px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.info__timing {
+    display: flex;
+}
+.time {
+    margin-right: 8px;
+}
+.avia {
+    width: 130px;
+    border-radius: 3px;
+    padding: 3px 0;
+    text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+    @include BackGR;
+}
+
+.request__title {
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.formText {
+    font-size: 10px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.formTitles {
+    font-size: 10px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

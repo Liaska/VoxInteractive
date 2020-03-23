@@ -17,63 +17,131 @@ html(lang="en")
 
 
         main(class="travel")
-            h1(class="travel__title") ЗИМБАБВЕ
+            .container
+                h1(class="travel__title title") ЗИМБАБВЕ
 
-            .travel__countries
-                div(class="travel__tour")
-                    figure(class="travel__description")
-                        div.travel__description-wrapper
-                            img(src="build/image/Toskana.jpg" alt="Toskana" class="travel__description-photo")
-                        figcaption(class="travel__description-price") от 118 112 &#8381
-                    p(class="country") Италия
-                    h2(class="Tagline") Под небом Тосканы
-                    p(class="route") Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)
-                    .info
-                        .info__timing
-                            .time 8 дней / 7 ночей
-                            .lang Русский язык
-                        .info__dates 27.04.19 - 04.05.19и еще 15 дат
-                    p(class="avia")
+                .travel__countries
+                    div(class="travel__tour")
+                        figure(class="travel__description")
+                            div.travel__description-wrapper
+                                img(src="build/image/Toskana.jpg" alt="Toskana" class="travel__description-photo")
+                            figcaption(class="travel__description-price") от 118 112 &#8381
+                        p(class="country") Италия
+                        h2(class="tagline") Под небом Тосканы
+                        p(class="route") Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)
+                        .info
+                            .info__timing
+                                .time 8 дней / 7 ночей
+                                .lang Русский язык
+                            .info__dates 27.04.19 - 04.05.19 и еще 15 дат
+                        p(class="avia") Авиаперелет включен!
 
-                div(class="travel__tour")
-                    figure(class="travel__description")
-                        div.travel__description-wrapper
-                            img(src="build/image/Iceland.jpg" alt="Iceland" class="travel__description-photo")
-                        figcaption(class="travel__description-price") от 118 112 &#8381
-                    p(class="country") ИСЛАНДИЯ
-                    h2(class="Tagline") Майские каникулы в Исландии
-                    p(class="route") Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик
-                    .info
-                        .info__timing
-                            .time 8 дней / 7 ночей
-                            .lang Русский язык
-                        .info__dates 27.04.19 - 04.05.19
+                    div(class="travel__tour")
+                        figure(class="travel__description")
+                            div.travel__description-wrapper
+                                img(src="build/image/Iceland.jpg" alt="Iceland" class="travel__description-photo")
+                            figcaption(class="travel__description-price") 140 715 &#8381
+                        p(class="country") ИСЛАНДИЯ
+                        h2(class="tagline") Майские каникулы в Исландии
+                        p(class="route") Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик
+                        .info
+                            .info__timing
+                                .time 8 дней / 7 ночей
+                                .lang Русский язык
+                            .info__dates 27.04.19 - 04.05.19
 
-                div(class="travel__tour")
-                    figure(class="travel__tour-photo")
-                        div.travel__description-wrapper
-                            img(src="build/image/Turkey.jpg" alt="Turkey" class="travel__description-photo")
-                        figcaption(class="travel__description-price") от 118 112 &#8381
-                    p(class="country") ТУРЦИЯ
-                    h2(class="Tagline") Открытие Турции
-                    p(class="route") Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул
-                    .info
-                        .info__timing
-                            .time 8 дней / 7 ночей
-                            .lang Русский язык
-                        .info__dates 28.04.19 - 05.05.19 и еще 3 даты
+                    div(class="travel__tour")
+                        figure(class="travel__description")
+                            div.travel__description-wrapper
+                                img(src="build/image/Turkey.jpg" alt="Turkey" class="travel__description-photo")
+                            figcaption(class="travel__description-price") 37 302 &#8381
+                        p(class="country") ТУРЦИЯ
+                        h2(class="tagline") Открытие Турции
+                        p(class="route") Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул
+                        .info
+                            .info__timing
+                                .time 8 дней / 7 ночей
+                                .lang Русский язык
+                            .info__dates 28.04.19 - 05.05.19 и еще 3 даты
 
-                div(class="travel__tour")
-                    figure(class="travel__description")
-                        div.travel__description-wrapper
-                            img(src="build/image/Grumantbyen.jpg" alt="Grumantbyen" class="travel__description-photo")
-                        figcaption(class="travel__description-price") от 118 112 &#8381
-                    p(class="country") НОРВЕГИЯ, ШПИЦБЕРГЕН
-                    h2(class="Tagline") От Свальбарда до Груманта
-                    .info
-                        .info__timing
-                            .time 8 дней / 7 ночей
-                            .lang Русский язык
-                        .info__dates 27.04.19 - 04.05.19и еще 15 дат
-                    p(class="avia")
+                    div(class="travel__tour")
+                        figure(class="travel__description")
+                            div.travel__description-wrapper
+                                img(src="build/image/Grumantbyen.jpg" alt="Grumantbyen" class="travel__description-photo")
+                            figcaption(class="travel__description-price") 145 000 &#8381
+                        p(class="country") НОРВЕГИЯ, ШПИЦБЕРГЕН
+                        h2(class="tagline") От Свальбарда до Груманта
+                        .info
+                            .info__timing
+                                .time 8 дней / 7 ночей
+                                .lang Русский язык
+                            .info__dates 27.04.19 - 04.05.19 и еще 15 дат
+                        p(class="avia") Гарантированный тур!
+
+        section.request
+            .container
+                h1(class='request__title title') Заявка на подбор путеешествия
+                form(class="request__form")
+                    div.request__you
+                        p(class="request__info formTitles formBorder uppercase") Немного о Вас
+                        .request__inputs
+                            div(class="name inputWrapper")
+                                label(class="formText formRequired uppercase" for="name") Имя
+                                input(type="text" name="name" required id="name")
+                            div(class="phone inputWrapper")
+                                label(class="formText uppercase" for="phone") Телефон
+                                input(type="number" name="phono" placeholder="+7___ ___ __ __" id="phone")
+                    div.request__travel
+                        p(class="request__info formTitles formBorder uppercase") О ПУТЕШЕСТВИИ
+                        .request__inputs
+                            div(class="where inputWrapper")
+                                label(class="formText formRequired uppercase" for="where" placeholder="Континент, страна или город" ) КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
+                                input(type="text" name="name" required id="where")
+                            div(class="when inputWrapper")
+                                label(class="formText uppercase" for="when") КОГДА?
+                                input(type="text" name="name" required id="when")
+                    div.request__socials
+                        .request__call
+                            p(class="request__info formTitles formBorder uppercase") УДОБНЫЙ СПОСОБ СВЯЗИ
+                            div.request__call-box
+                                .label-box
+                                    label(class="formText uppercase") VIBER
+                                    input(type="checkbox" name="VIBER" value="VIBER")
+                                .label-box
+                                    label(class="formText uppercase") WHATSAPP
+                                    input(type="checkbox" name="WHATSAPP" value="WHATSAPP")
+                                .label-box
+                                    label(class="formText uppercase") ПОЧТА
+                                    input(type="checkbox" name="mail" value="mail")
+                                .label-box
+                                label(class="formText uppercase") ТЕЛЕФОН
+                                input(type="checkbox" name="phone" value="phone")
+                        .request__findInfo
+                            p(class="request__info formTitles formBorder uppercase") ОТКУДА УЗНАЛИ О НАС
+                            div.request__findInfo-box
+                                .label-box
+                                    label(class="formText uppercase") ИНТЕРНЕТ
+                                    input(type="checkbox" name="interner" value="interner")
+                                .label-box
+                                    label(class="formText uppercase") РЕКОМЕНДОВАЛИ ДРУЗЬЯ
+                                    input(type="checkbox" name="recommend" value="recommend")
+                                .label-box
+                                    label(class="formText uppercase") СОЦ. СЕТИ
+                                    input(type="checkbox" name="webSocials" value="webSocials")
+                                .label-box
+                                label(class="formText uppercase") УЖЕ ЕЗДИЛ
+                                input(type="checkbox" name="oldUser" value="oldUser")
+                    .request__subscribe
+                        input(type="checkbox")
+                        .subscribe_info
+                            label Получать свежие предложения по электронной почте
+                            p Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+                    .request__personal
+                        input(type="checkbox" required)
+                        .personal_info
+                            label С обработкой своих персональных данных согласен.
+                            p Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+
+                            p #[span *] Поля, которые надо обязательно заполнить
+                <button type="submit">ОТПРАВИТЬ</button>
         script(src="build/js/script.js")
