@@ -81,67 +81,86 @@ html(lang="en")
         section.request
             .container
                 h1(class='request__title title') Заявка на подбор путеешествия
-                form(class="request__form")
+                form(class="request__form" name="main-form")
                     div.request__you
                         p(class="request__info formTitles formBorder uppercase") Немного о Вас
                         .request__inputs
                             div(class="name inputWrapper")
                                 label(class="formText formRequired uppercase request__label" for="name") Имя
                                 input(type="text" name="name" required id="name")
+                                p.hidden Укажите своё имя
                             div(class="phone inputWrapper")
                                 label(class="formText uppercase request__label" for="phone") Телефон
-                                input(type="text" name="phono" placeholder="+7___ ___ __ __" id="phone" pattern="+7[0-9]{3}-[0-9]{7}" maxlength="12" minlength="12")
+                                input(type="tel" name="phono" placeholder="+7___ ___ __ __" id="phone" patter="/(7|8|9)\d{9}/")
                     div.request__travel
                         p(class="request__info formTitles formBorder uppercase") О ПУТЕШЕСТВИИ
                         .request__inputs
                             div(class="where inputWrapper")
-                                label(class="formText formRequired uppercase request__label" for="where" placeholder="Континент, страна или город" ) КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
-                                input(type="text" name="name" required id="where")
+                                label(class="formText formRequired uppercase request__label" for="where"  ) КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
+                                input(type="text" name="where" required id="where" placeholder="Континент, страна или город")
+                                p.hidden Укажите континент, страну или город
                             div(class="when inputWrapper")
                                 label(class="formText uppercase request__label" for="when") КОГДА?
-                                input(type="text" name="name" required id="when")
+                                input(type="text" name="when" id="when" placeholder="Даты или временной интервал")
                     div.request__socials
                         .request__call
                             p(class="request__info formTitles formBorder uppercase") УДОБНЫЙ СПОСОБ СВЯЗИ
                             div.request__call-box
                                 .label-box
                                     label(class="formText uppercase") VIBER
-                                    input(type="checkbox" name="VIBER" value="VIBER")
+                                    input(type="checkbox" name="VIBER" value="VIBER" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
                                     label(class="formText uppercase") WHATSAPP
-                                    input(type="checkbox" name="WHATSAPP" value="WHATSAPP")
+                                    input(type="checkbox" name="WHATSAPP" value="WHATSAPP" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
                                     label(class="formText uppercase") ПОЧТА
-                                    input(type="checkbox" name="mail" value="mail")
+                                    input(type="checkbox" name="mail" value="mail" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
-                                label(class="formText uppercase") ТЕЛЕФОН
-                                input(type="checkbox" name="phone" value="phone")
+                                    label(class="formText uppercase") ТЕЛЕФОН
+                                    input(type="checkbox" name="phone" value="phone" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                         .request__findInfo
                             p(class="request__info formTitles formBorder uppercase") ОТКУДА УЗНАЛИ О НАС
                             div.request__findInfo-box
                                 .label-box
                                     label(class="formText uppercase") ИНТЕРНЕТ
-                                    input(type="checkbox" name="interner" value="interner")
+                                    input(type="checkbox" name="interner" value="interner" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
                                     label(class="formText uppercase") РЕКОМЕНДОВАЛИ ДРУЗЬЯ
-                                    input(type="checkbox" name="recommend" value="recommend")
+                                    input(type="checkbox" name="recommend" value="recommend" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
                                     label(class="formText uppercase") СОЦ. СЕТИ
-                                    input(type="checkbox" name="webSocials" value="webSocials")
+                                    input(type="checkbox" name="webSocials" value="webSocials" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                                 .label-box
-                                label(class="formText uppercase") УЖЕ ЕЗДИЛ
-                                input(type="checkbox" name="oldUser" value="oldUser")
+                                    label(class="formText uppercase") УЖЕ ЕЗДИЛ
+                                    input(type="checkbox" name="oldUser" value="oldUser" class="bigsize")
+                                    img(src="../build/image/down-big.svg", alt="" class="bigArrow")
                     .request__subscribe
-                        input(type="checkbox")
+                        div.box
+                        .checkContainer
+                            input(type="checkbox" id="subscribe" class="littlesize")
+                            img(src="../build/image/down-small.svg", alt="" class="smallArrow")
                         .subscribe_info
-                            label Получать свежие предложения по электронной почте
-                            p Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+                            label(for="subscribe" class="formText label-sub") Получать свежие предложения по электронной почте
+                            p.additional  Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+                            img(src="../build/image/down-small.svg", alt="" class="smallArrow")
                     .request__personal
-                        input(type="checkbox" required)
+                        div.box
+                        .checkContainer
+                            input(type="checkbox" id="personal" class="littlesize" required)
+                            img(src="../build/image/down-small.svg", alt="" class="smallArrow")
                         .personal_info
-                            label С обработкой своих персональных данных согласен.
-                            p Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
-
-                            p #[span *] Поля, которые надо обязательно заполнить
-                    button(type="submit") ОТПРАВИТЬ
+                            label(for="personal" class="formText label-personal") С обработкой своих персональных данных согласен.
+                            p.additional Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+                            p(class="additional last") #[span *] Поля, которые надо обязательно заполнить
+                    button(type="submit" class="request__button") ОТПРАВИТЬ
+                        <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.14286 8L4 4.58537L1 1" stroke="black"/>
+                        </svg>
         script(src="build/js/script.js")
